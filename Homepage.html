@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!--Header and Menu Section-->
+    <header class="container">
+        <nav>
+            <ul>
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="signuppage.html">Sign Up</a></li>
+                <li><a href="loginpage.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Booking Section-->
+    <section class="main-content container">
+        <div class="booking-form" id="booking-and-confirmation">
+            <!-- Booking input Form -->
+            <div id="booking-input">
+                <h3>Booking Flights</h3>
+                <div class="input-group">
+                    <label for="flying-from">Flying From</label>
+                    <input class="inp-style" id="flying-from" type="text" name="" placeholder="Visakhapatnam, India">
+                </div>
+                <div class="input-group">
+                    <label for="flying-to">Flying To</label>
+                    <input class="inp-style" id="flying-to" type="text" name="" placeholder="New Delhi, India">
+                </div>
+                <div class="inputs">
+                    <div class="input-group">
+                        <label for="departure-date">Departure</label>
+                        <input class="inp-style" id="departure-date" type="date" name="">
+                    </div>
+                    <div class="input-group">
+                        <label for="return-date">Return</label>
+                        <input class="inp-style" id="return-date" type="date" name="">
+                    </div>
+                </div>
+
+                <label for="first-class-ticket-number">First Class (Rs2200)</label>
+                <div class="input-group first-class">
+                    <div class="plus-minus-btn">
+                        <span id="first-class-minus" class="control">-</span>
+                    </div>
+                    <div>
+                        <input class="inp-style inp-width" type="text" name="" id="first-class-ticket-number" value="0">
+                    </div>
+                    <div class="plus-minus-btn">
+                        <span id="first-class-plus" class="control">+</span>
+                    </div>
+                </div>
+
+                <label for="economy-class-ticket-number">Economy (Rs5600)</label>
+                <div class="input-group economy-class">
+                    <div class="plus-minus-btn">
+                        <span id="economy-class-minus" class="control">-</span>
+                    </div>
+                    <div>
+                        <input class="inp-style inp-width" type="text" name="" id="economy-class-ticket-number" value="0">
+                    </div>
+                    <div class="plus-minus-btn">
+                        <span id="economy-class-plus" class="control">+</span>
+                    </div>
+                </div>
+                <div class="calculations">
+                    <div class="amount">
+                        <div class="left">
+                            <p>Subtotal</p>
+                        </div>
+                        <div class="right">
+                            <p>Rs<span id="price-subtotal">0</span></p>
+                        </div>
+                    </div>
+
+                    <div class="amount">
+                        <div class="left">
+                            <p>Charge 10% GST</p>
+                        </div>
+                        <div class="right">
+                            <p>Rs<span id="price-gst">0</span></p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="amount">
+                        <div class="left">
+                            <h4>Total</h4>
+                        </div>
+                        <div class="right">
+                            <p>Rs<span id="price-total">0</span></p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-style" id="book-now-button">Book Now</button>
+            </div>
+
+            <!-- booking confirmation form -->
+            <div id="booking-confirmation">
+                <h2>Booking Confirmation Form</h2><br>
+
+                <p>Thanks for booking with <strong>Indigo</strong>. Here is your booking information</p><br>
+
+                <label for="confirmation-flying-from">Flying from</label>
+                <input type="text" id="confirmation-flying-from" placeholder="Dhaka, Bangladesh">
+
+                <label for="confirmation-flying-to">Flying to</label>
+                <input type="text" id="confirmation-flying-to" placeholder="New York, United States">
+
+                <label for="confirmation-departure">Departure Date</label>
+                <input type="text" id="confirmation-departure" placeholder="31 January 2024">
+
+                <label for="confirmation-return">Return date</label>
+                <input type="text" id="confirmation-return" placeholder="32 January 2024">
+
+                <label for="confirmation-price-total">Total ticket cost(Rs)</label>
+                <input type="number" id="confirmation-price-total" placeholder=0>
+
+                <button id="print-button" onclick="window.print()">Print this information</button>
+
+            </div>
+        </div>
+
+        <div class="booking-content">
+            <h1>Indigo - Travel around the world</h1>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
